@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Gemills</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="images2/logo.png" width="100px"></a>
+      </div>
+      <nav>
+        <ul id="MenuItems">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="account.html">Account</a></li>
+        </ul>
+      </nav>
+      <a href="cart.html"><img src="images2/cart.png" width="30px" height="30px"></a>
+      <img src="images2/menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+  </div>
+
+  <div class="small-container" style="margin-top:80px; margin-bottom:80px;">
+    <div class="row">
+      <div class="col-2">
+        <h1>Hubungi Kami</h1>
+        <p>Butuh bantuan atau ingin tahu lebih banyak tentang produk kami?  
+          Kirim pesan melalui formulir di bawah atau hubungi kami melalui media sosial.</p>
+        <ul>
+          <li><strong>Email:</strong> support@gemills.com</li>
+          <li><strong>Telepon:</strong> 808080 </li>
+          <li><strong>Alamat:</strong> Jl. Raya Laguna No. 9, Surabaya</li>
+        </ul>
+      </div>
+      <div class="col-2">
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Your Email" required>
+          <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+        <p id="formMessage" style="margin-top:10px; color:green; display:none;">Pesan kamu telah terkirim!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
+          <h3>Download Our App</h3>
+          <p>Download App for Android and ios mobile phone</p>
+          <div class="app-logo">
+            <img src="images2/play-store.png">
+            <img src="images2/app-store.png">
+          </div>
+        </div>
+        <div class="footer-col-2">
+          <img src="images2/logo-white.png">
+          <p>Our Purpose Is To Sustainably Make the Pleasure and
+            Benefits of Sports Accessible to the Many</p>
+        </div>
+        <div class="footer-col-3">
+          <h3>Useful Links</h3>
+          <ul>
+            <li>Coupons</li>
+            <li>Blog Post</li>
+            <li>Return Policy</li>
+            <li>Join Affiliates</li>
+          </ul>
+        </div>
+        <div class="footer-col-4">
+          <h3>Follow Us</h3>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Youtube</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <p class="copyright">Copyright 2025 - Gemills</p>
+    </div>
+  </div>
+
+  <script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+    function menutoggle() {
+      if (MenuItems.style.maxHeight == "0px") {
+        MenuItems.style.maxHeight = "200px"
+      } else {
+        MenuItems.style.maxHeight = "0px"
+      }
+    }
+
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      document.getElementById("formMessage").style.display = "block";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
